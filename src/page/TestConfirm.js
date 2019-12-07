@@ -9,11 +9,12 @@ class InputNumber extends Component{
     render() {
         return (
             <div>
-               TestConfirm
+               12345
             </div>
         );
     }
     async componentDidMount(){
+        console.log('--------confirm', confirm)
         let res = await confirm("确定删除吗")
         if(res) {
             console.log("是")
