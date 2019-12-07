@@ -1,22 +1,13 @@
-import React, { Component } from 'react';
+//
 
-class InputNumber extends Component{
-    render() {
-        return (
-            <div>
-                {this.props.name}
-            </div>
-        );
-    }
-    componentDidMount() {
-        console.log('mount',this.props.name)
-    }
-    componentDidUpdate() {
-        console.log('update',this.props.name)
-    }
-    componentWillUnmount() {
-        console.log('unmount',this.props.name)
-    }
- 
+function Confirm (props) {
+    console.log('-ccccc1',  props)
+    return new Promise(function (resolve, reject) {
+        if (window.confirm(props)) {
+            resolve(true)
+        } else {
+            resolve(false)
+        }
+    })
 }
-export default InputNumber
+export default Confirm
